@@ -1,0 +1,9 @@
+{
+    "python.defaultInterpreterPath": "/Users/shubhamjain/Documents/pai/.venv/bin/python",
+    "python.analysis.extraPaths": [
+        "/Users/shubhamjain/Documents/pai/.venv/lib/python3.12/site-packages"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/Users/shubhamjain/Documents/pai/.venv/lib/python3.12/site-packages"
+    ]
+}
