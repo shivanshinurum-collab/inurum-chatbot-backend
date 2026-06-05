@@ -1,0 +1,626 @@
+[COMPANY_INFO]
+Company: Inurum Technologies
+Tagline: Flutter App, IoT & SaaS Development Company in Indore, India
+HQ: Indore, Madhya Pradesh, India
+European Office: Legnano (MI), Italy
+Website: https://www.inurum.com
+Email: info@inurum.com
+Phone: +91-7974334291
+Italy Phone: +39 03311586334
+Italy Email: contact@techcrafters.it
+Philosophy: One Team, Full Stack, No Handoffs
+ISO: ISO 9001 Certified
+Compliance: GDPR, SOC2-ready, HIPAA-ready
+Response SLA: Under 24 hours
+Clients Served: 64+
+Apps Delivered: 32+
+Engineer Experience: 8+ years average
+Talent Retention: 96%
+Time to Hire: 14 days
+English Proficiency: 100%
+Onboarding Speed: 46 to 72 hours
+
+[OFFICE_INDIA]
+Location: Indore Headquarters
+Address: Plot No. 388, Infront of Retina Hospital, Scheme No. 54 PU4, Indore, Madhya Pradesh, India - 452010
+Coordinates: 22.7196° N, 75.8577° E
+Timezone: UTC+5:30 (IST)
+Hours: Monday to Friday, 09:00 - 18:00
+Phone: +91-7974334291
+Email: info@inurum.com
+
+[OFFICE_ITALY]
+Location: European Operations
+Address: Via Grazia Deledda, 11, Legnano (MI), Italy
+Coordinates: 45.5953° N, 8.9147° E
+Timezone: UTC+1 (CET / CEST)
+Phone: +39 03311586334
+Email: contact@techcrafters.it
+
+[LEADERSHIP]
+CEO: Shubham Jain
+Owner: Shubham Jain
+Owner: Kamlesh Kushwah
+Manager: Kamlesh Kushwah
+
+[TEAM_MEMBER]
+Name: Shubham Jain
+Roles:
+- CEO
+- Owner
+- Flutter Developer
+- Android Developer
+Skills:
+- Flutter
+- Dart
+- Kotlin
+- Java
+- Android SDK
+- Executive Leadership
+- Strategic Planning
+
+[TEAM_MEMBER]
+Name: Kamlesh Kushwah
+Roles:
+- Owner
+- Manager
+Skills:
+- Operations Management
+- Team Coordination
+- Project Delivery
+- Client Liaison
+- Leadership
+
+[TEAM_MEMBER]
+Name: Shivansh Kushwah
+Roles:
+- Flutter Developer
+- Backend Developer
+- Android Developer
+- iOS Developer
+- Full Stack Developer
+- Python Developer
+- AI Engineer
+Skills:
+- Flutter
+- Dart
+- Node.js
+- Go
+- Kotlin
+- Java
+- Swift
+- SwiftUI
+- Python
+- Django
+- Flask
+- AI
+- Machine Learning
+- Kalman Filtering
+- Sensor Fusion
+
+[TEAM_MEMBER]
+Name: Shivam Mishra
+Roles:
+- Backend Developer
+- Java Developer
+- Python Developer
+Skills:
+- Java
+- Spring Boot
+- Python
+- Django
+- Database Architecture
+- API Integration
+
+[TEAM_MEMBER]
+Name: Devashish Sharma
+Roles:
+- Flutter Developer
+- Java Developer
+Skills:
+- Flutter
+- Dart
+- Java
+- Object-Oriented Development
+- Mobile UI Engineering
+
+[TEAM_MEMBER]
+Name: Madhvi Dwivedi
+Roles:
+- Backend Developer
+- Full Stack Developer
+Skills:
+- Node.js
+- PostgreSQL
+- MongoDB
+- API Construction
+- Full Stack Development
+
+[TEAM_MEMBER]
+Name: Praveen Shrivastav
+Roles:
+- Backend Developer
+Skills:
+- Backend Engineering
+- Database Architecture
+- API Design
+
+[TEAM_MEMBER]
+Name: Mohan Garase
+Roles:
+- Flutter Developer
+Skills:
+- Flutter
+- Dart
+- Cross-Platform Mobile Layouts
+- UI Engineering
+
+[TEAM_MEMBER]
+Name: Tulsi Bhawsar
+Roles:
+- Flutter Developer
+Skills:
+- Flutter
+- Dart
+- Responsive Layouts
+- State Management
+- Mobile UI Design
+
+[TEAM_MEMBER]
+Name: Manish Pal
+Roles:
+- Flutter Developer
+Skills:
+- Flutter
+- Dart
+- API Consumption
+- Application Lifecycle
+
+[TEAM_MEMBER]
+Name: Rishabh Soni
+Roles:
+- Flutter Developer
+Skills:
+- Flutter
+- Dart
+- BLoC State Management
+- Clean Architecture
+
+[TEAM_MEMBER]
+Name: Imran Khan
+Roles:
+- Flutter Developer
+Skills:
+- Flutter
+- Dart
+- Cross-Platform Optimization
+- UI Components
+
+[TEAM_MEMBER]
+Name: Harsh Hotwani
+Roles:
+- Android Developer
+Skills:
+- Android SDK
+- Kotlin
+- XML Layout Design
+- Native Android Development
+
+[TEAM_MEMBER]
+Name: Aman Rai
+Roles:
+- Android Developer
+Skills:
+- Android SDK
+- Kotlin
+- Native Android Development
+
+[TEAM_MEMBER]
+Name: Priyanshi Jadon
+Roles:
+- iOS Developer
+Skills:
+- iOS SDK
+- Swift
+- SwiftUI
+- Native iOS Development
+- Apple Guidelines
+
+[TEAM_MEMBER]
+Name: Shubham Saratha
+Roles:
+- BDE (Business Development Executive)
+Skills:
+- Business Development
+- Client Acquisition
+- Sales Strategy
+- Account Management
+- Public Relations
+
+[SERVICE]
+Name: Mobile App Engineering
+Platforms:
+- Native iOS (Swift, UIKit, SwiftUI)
+- Native Android (Kotlin, Jetpack Compose, Java)
+- Cross-Platform Flutter (Dart, Skia, BLoC)
+- Cross-Platform React Native (JavaScript, TypeScript, Hermes)
+Features:
+- Offline-First Synchronization (Realm, Room, SQLite)
+- Biometric Authentication (FaceID, TouchID)
+- SSL Pinning
+- Code Obfuscation
+- Main-Thread Offloading
+Performance:
+- Crash-Free Rate: 99.9%+
+- UI Interactive Latency: Under 150ms
+MVP Timeline: 8 to 14 weeks
+Enterprise Timeline: 16 to 24 weeks
+
+[SERVICE]
+Name: IoT & Embedded Engineering
+Capabilities:
+- Firmware in C/C++ (ARM Cortex-M, RISC-V, ESP32)
+- RTOS (FreeRTOS, Zephyr)
+- PCB Design (KiCAD, EAGLE)
+- BLE, Zigbee, LoRaWAN, NB-IoT, LTE Cat M1
+- MQTT, AMQP, WebSockets
+- Kalman Filtering, DSP, Sensor Fusion
+- OTA Firmware Updates
+- HSM / Secure Cryptographic Storage
+Performance:
+- Fleet Uptime: 99.95%+
+- Edge Latency: Under 50ms
+- Firmware Support Lifecycle: 5 years
+BLE MVP Timeline: 8 to 12 weeks
+Full IoT MVP Timeline: 12 to 20 weeks
+
+[SERVICE]
+Name: Backend & SaaS Platforms
+Stack:
+- Go, Node.js, Python
+- Kafka, RabbitMQ, gRPC
+- REST, GraphQL, WebSockets
+- Redis, Memcached
+- AWS, GCP, Azure
+- Kubernetes (EKS/GKE)
+- Terraform
+- ClickHouse, Dremio, Kafka (Data Pipelines)
+Features:
+- Multi-Tenant SaaS Isolation (RLS / Schema-per-tenant)
+- Blue-Green Deployments
+- SOC2, HIPAA, GDPR Compliance
+- Disaster Recovery RTO: Under 4 hours
+Performance:
+- Uptime SLA: 99.99%
+- API Latency: Under 18ms
+- Concurrency: 50,000 requests/second
+- Autoscaling: 10x spike handling, sub-100ms spin-up
+SaaS MVP Timeline: 6 to 12 weeks
+
+[SERVICE]
+Name: Dedicated Engineering Teams
+Roles Available:
+- Flutter Developers
+- Backend Engineers
+- IoT & Embedded Engineers
+- QA & Test Engineers
+Metrics:
+- Time-to-Hire: 14 days
+- Retention Rate: 96%
+- Average Experience: 8+ years
+- English Proficiency: 100%
+Onboarding Timeline: 46 to 72 hours after selection
+
+[ENGAGEMENT_PROCESS]
+Step 1: Free Technical Consultation (30 min call via inurum.com/start, cost estimate in 12-24 hours)
+Step 2: Tech Plan (DB schema, API contracts, hardware architecture, timelines)
+Step 3: We Build (concurrent Firmware, Mobile, Backend, QA sprints)
+Step 4: We Test (unit, integration, load/stress, penetration tests)
+Step 5: You Launch (AWS/GCP/Azure deployment, App Store/Play publishing, 24/7 monitoring)
+
+[CASE_STUDY]
+Name: ELIoT — AI Multi-Sensor Plant Intelligence
+Client: GardenStuff (Italy)
+Platforms: Android, iOS, Web
+Timeline: 8 Months
+Status: Launched via Kickstarter
+Category: Consumer IoT, Smart Home, AgTech
+Sensors: Ambient Temperature, Light Intensity & Spectrum, Air Humidity, Soil Moisture, Soil pH
+Sampling: Every 6 minutes over 96-hour initial survey
+Features:
+- Live Telemetry Dashboard
+- Automated Care Plans with Push Notifications
+- Amazon Alexa and Google Assistant Integration
+- 6-month battery life on single charge
+- Qi Wireless Charging
+
+[CASE_STUDY]
+Name: SmartStarter — Semi-Truck Remote Engine Controller
+Industry: Commercial Trucking & Logistics
+Market: Canada & North America
+Platforms: iOS, Android, Cloud Backend
+Category: Fleet Telematics, Connected Vehicles
+Features:
+- Remote Start/Stop via mobile app
+- Configurable safety runtime limits (10 min to 1 hour)
+- Auto-Start on low battery or low temperature
+- Pre-Trip Safety Check (oil pressure, coolant, parking brake, gearbox, battery, hood sensor)
+- Engine Protection Loop (auto-shutdown on critical thresholds)
+- GPS Tracking with Cellular Geofencing
+- Plug-and-play PCB (no wiring cuts, warranty preserved)
+
+[CASE_STUDY]
+Name: Fruitrack — Agricultural IoT Telemetry
+Client: Wisecrop (Portugal)
+Platforms: iOS, Android, Web Dashboard, Handheld IoT Scanners
+Timeline: 8 Months
+Status: Live in production
+Category: AgTech, Enterprise SaaS, Workforce Management
+Play Store: https://play.google.com/store/apps/details?id=com.wisecrop.fruitrack
+Features:
+- Offline-First Sync (SQLite queue → AWS on reconnect)
+- Harvest entry under 10 seconds (8x faster than legacy)
+- Live supervisor dashboard (harvest volumes, parcel logs, worker metrics)
+
+[CASE_STUDY]
+Name: Current Detection Sensor System
+Domain: Heavy Industrial Welding Machinery
+Platforms: Embedded Firmware, Wi-Fi, Cloud Analytics
+Category: Industrial IoT, Predictive Maintenance
+Features:
+- Non-Invasive Split-Core Hall Effect Sensor (no wiring cuts)
+- Supports AC and DC welding (MIG, TIG, resistive, spot)
+- 9 data fields per pulse: peak current, average current, pulse duration, residual current, current variation profile, pulse count, power factor, energy consumed, thermal load index
+- JSON payload over HTTP POST via Wi-Fi
+- Local flash buffer with auto-retry on dropout
+- Weld quality profiling via pulse curve shape data
+
+[CASE_STUDY]
+Name: Mobile Refrigeration Control System
+Domain: Cold-Chain Logistics & Asset Tracking
+Stack: ESP32, Quectel Cellular Modules, Cloud IoT
+Category: Telematics, Cold-Chain Management
+Features:
+- Temperature, door sensor, and power grid logging
+- GPS telemetry over global cellular networks
+- SMS/email alerts on temperature threshold breach
+- Remote setpoint and defrost cycle control from dispatch
+
+[PRODUCT]
+Name: eBaba Entertainment TV
+Category: Mobile App, Media Streaming
+Play Store: https://play.google.com/store/search?q=ebaba+entertainment+tv&c=apps&hl=en_IN
+Description: Free digital media streaming app with live TV channels and radio stations.
+
+[PRODUCT]
+Name: FamConnect
+Category: Mobile App, Family Safety
+Play Store: https://play.google.com/store/apps/details?id=com.iconian.famconnect&hl=en_IN
+Description: Real-time GPS tracking and geofencing for families with panic button and background audio.
+
+[PRODUCT]
+Name: News Nation TV
+Category: Mobile App, News & Media
+Play Store: https://play.google.com/store/apps/details?id=com.newsnationandroid.app&hl=en_IN
+Description: Official app for News Nation Hindi news channel with live TV and breaking news.
+
+[PRODUCT]
+Name: M Learning India — NEET, IITJEE
+Category: Mobile App, EdTech
+Play Store: https://play.google.com/store/apps/details?id=com.it.mlearning&hl=en_IN
+Description: E-learning app for IIT-JEE and NEET with mock tests, video lectures, and performance tracking.
+
+[PRODUCT]
+Name: Momskart by Moms of Bharat
+Category: Mobile App, E-Commerce
+Play Store: https://play.google.com/store/apps/developer?id=Momskart&hl=en_IN
+Description: Marketplace for mothers across India to sell homemade food and handicrafts.
+
+[PRODUCT]
+Name: Horeca Store
+Category: Mobile App, B2B Supply Chain
+Play Store: https://play.google.com/store/apps/details?id=com.wnapp.id1704197307176&hl=en_IN
+Description: B2B marketplace connecting hotels, restaurants, and catering with wholesalers.
+
+[PRODUCT]
+Name: InRide
+Category: Mobile App, Ride-Sharing
+Play Store: https://play.google.com/store/apps/developer?id=InRide+Technology&hl=en_IN
+Description: Ride-sharing app with real-time fare negotiation between users and drivers.
+
+[PRODUCT]
+Name: ZYE
+Category: Mobile App, Super App
+Play Store: https://play.google.com/store/apps/developer?id=Hyperdock+Pvt+Ltd&hl=en_IN
+Description: Super-app with taxi booking, home repair, food delivery, and bill payment.
+
+[PRODUCT]
+Name: Sparkx Fly
+Category: Mobile App, Social Networking
+Play Store: https://play.google.com/store/apps/details?id=com.sparkxfly.sparkxfly&hl=en_IN
+Description: Social matchmaking platform based on mutual interests and geo-proximity.
+
+[PRODUCT]
+Name: Muslim Marriage & Chat: HalalM
+Category: Mobile App, Matrimonial
+Play Store: https://play.google.com/store/apps/details?id=com.halalmatc.app&hl=en_IN
+Description: Halal matrimonial matchmaking and secure chat for single Muslims worldwide.
+
+[PRODUCT]
+Name: Dating App Amore: Chat & Date
+Category: Mobile App, Dating
+Play Store: https://play.google.com/store/apps/details?id=com.amoredating&hl=en_IN
+Description: Swipe-based dating app with live location check-ins and video chats.
+
+[PRODUCT]
+Name: Quit Vaping — UnPuff
+Category: Mobile App, Health & Recovery
+Play Store: https://play.google.com/store/apps/details?id=com.zencode.unpuff&hl=en_IN
+Description: Behavioral recovery tracker to quit vaping with health and savings metrics.
+
+[PRODUCT]
+Name: Rivoz — Quit Drinking
+Category: Mobile App, Health & Recovery
+Play Store: https://play.google.com/store/apps/details?id=com.zencode.drinkcontrol&hl=en_IN
+Description: Alcohol recovery app with calorie counters, mood journals, and savings trackers.
+
+[PRODUCT]
+Name: QuitX
+Category: Mobile App, Health & Recovery
+Play Store: https://play.google.com/store/apps/details?id=quitx.app.io&hl=en_IN
+Description: All-in-one addiction recovery app with streaks, breathing exercises, and meditation.
+
+[PRODUCT]
+Name: Storyboard — Private Podcasts
+Category: Mobile App, Enterprise Communication
+Play Store: https://play.google.com/store/apps/details?id=com.storyboardpodcasts&hl=en_IN
+Description: Secure audio platform for companies to broadcast private podcasts to employees.
+
+[PRODUCT]
+Name: Rafahiya Meuzzein
+Category: Mobile App, Religious & Travel
+Play Store: https://play.google.com/store/apps/details?id=com.meuzzein.rafahiyatourism&hl=en_IN
+Description: Prayer timing, Qibla compass, and tourism directory for Muslim travelers.
+
+[PRODUCT]
+Name: eMessenger
+Category: Mobile App, Education
+Play Store: https://play.google.com/store/apps/details?id=com.nway.ag.emessenger&hl=en_IN
+Description: Moderated messaging and file-sharing tool for schools, teachers, and students.
+
+[PRODUCT]
+Name: DgDiary India
+Category: Mobile App, School ERP
+Play Store: https://play.google.com/store/apps/details?id=dgdiary.com&hl=en_IN
+Description: School ERP syncing attendance, homework, and report cards between teachers and parents.
+
+[PRODUCT]
+Name: Visual Learning
+Category: Mobile App, EdTech
+Play Store: https://play.google.com/store/apps/developer?id=VisualLearning+Team&hl=en_IN
+Description: Educational apps for grades 9-12 with 3D visualizations for science subjects.
+
+[PRODUCT]
+Name: Eisaab
+Category: Mobile App, FinTech
+Play Store: https://play.google.com/store/apps/details?id=com.nayanikaai.eisaab&hl=en_IN
+Description: Billing and digital ledger for small shops with PDF invoice generation.
+
+[PRODUCT]
+Name: Khulasa First
+Category: Mobile App, Local News
+Play Store: https://play.google.com/store/apps/details?id=app.khulasafirst.com&hl=en_IN
+Description: Local news aggregator and e-paper for Indore and Madhya Pradesh.
+
+[PRODUCT]
+Name: WLTPe — Commission-based Transactions
+Category: Mobile App, FinTech
+Play Store: https://play.google.com/store/apps/details?id=com.new_wltpe&hl=en_IN
+Description: Utility recharge, bill payment, and money transfer platform for retail agents.
+
+[PRODUCT]
+Name: GoFreely
+Category: Mobile App, Mental Wellness
+Play Store: https://play.google.com/store/search?q=go+freely&c=apps&hl=en_IN
+Description: Anonymous emotional wellness app connecting users with trained active listeners.
+
+[PRODUCT]
+Name: Go Healer
+Category: Mobile App, Mental Wellness
+Play Store: https://play.google.com/store/apps/details?id=com.healer.newgofreely&hl=en_IN
+Description: Wellness listener support app with chat management and analytics tools.
+
+[PRODUCT]
+Name: FYFIT
+Category: Mobile App, Wearable Health
+Play Store: https://play.google.com/store/apps/details?id=com.smartring.smartring&hl=en_IN
+Description: Smart ring health tracker syncing heart rate, sleep, steps, and oxygen levels.
+
+[PRODUCT]
+Name: 8bottle Smart Hydration
+Category: IoT, Health & Wearable
+Play Store: https://play.google.com/store/apps/details?id=com.eightbottle.eightbottleapp&hl=en_IN
+Description: Smart water bottle companion app with hydration tracking, LED control, and Qi charging.
+
+[PRODUCT]
+Name: ELIoT Responsive Garden
+Category: IoT, Smart Home, AgTech
+Play Store: https://play.google.com/store/apps/details?id=com.gardenstuff_eliot&hl=en_IN
+Description: Plant monitor app reading soil moisture, temperature, and light from ELIoT hardware.
+
+[PRODUCT]
+Name: multiTrack
+Category: IoT, Fleet Tracking
+Play Store: https://play.google.com/store/apps/details?id=com.adnate.multitrack&hl=en_IN
+Description: GPS fleet tracking with remote engine lock/unlock and geofence alarms.
+
+[PRODUCT]
+Name: SHAZCOM GPS — Fiji
+Category: IoT, Fleet Tracking
+Play Store: https://play.google.com/store/apps/details?id=com.SHAZCOMGPSFijiclient.android&hl=en_IN
+Description: GPS fleet tracking solution for commercial vehicle operators in Fiji.
+
+[PRODUCT]
+Name: Semi ELD
+Category: IoT, Fleet Compliance
+Play Store: https://play.google.com/store/apps/details?id=com.semi.eld&hl=en_IN
+Description: HOS-compliant Electronic Logging Device connecting via Bluetooth to truck hardware.
+
+[PRODUCT]
+Name: Fruitrack Telemetry
+Category: IoT, AgTech, Enterprise SaaS
+Play Store: https://play.google.com/store/apps/details?id=com.wisecrop.fruitrack
+Description: Worker task and harvest tracking with offline-first SQLite sync and live supervisor dashboard.
+
+[PRODUCT]
+Name: Smart Parichay
+Category: Web SaaS, Digital Business Card
+Website: https://smartparichay.in/
+Description: NFC + QR digital business card platform with cloud sync for 50k+ users.
+
+[PRODUCT]
+Name: Creative Construction Ledger (CCL)
+Category: Web SaaS, Construction
+Website: https://cclpro.in/
+Description: Multi-tenant SaaS for construction project cost estimation and real-time financial reporting.
+
+[PRODUCT]
+Name: Worthwhiz Financials
+Category: Web SaaS, FinTech
+Website: https://worthwhiz.in/
+Description: Stock research SaaS with real-time market data for 10k+ institutional investors.
+
+[TECH_BLOG]
+Title: Vehicle Diagnostics & Telematics with ESP32-S3
+MCU: ESP32-S3 (dual-core)
+Board Size: 56mm x 55mm
+GPS Module: Quectel LC86G
+Connectivity: Bluetooth 5 (BLE), Wi-Fi 4 (802.11 b/g/n)
+Protocols Supported:
+- SAE J1939 (CAN bus, heavy-duty trucks: RPM, coolant temp, fuel rate, DTCs)
+- OBD-II (ISO 15765-4 CAN, passenger vehicles)
+- SAE J1708 (RS-485/Modbus, legacy commercial fleet)
+
+[TECH_BLOG]
+Title: The Versatile Quectel BG95 for IoT Applications
+Module: Quectel BG95-M3
+Standards: LTE CAT M1, LTE NB2, GPS, GNSS
+Board Size: 50mm x 50mm
+Onboard Sensors: Humidity, Temperature, Atmospheric Pressure
+Power: Micro USB, 3.7V battery, 5V solar charging
+Use Cases:
+- India: Mobile refrigeration and asset tracking
+- Germany: Vending machine stock monitoring and cashless payments
+- USA: Vehicle CAN bus tracking
+- Nigeria: Power line tracking (generation to base stations)
+- Israel: PLC machine communication
+
+[TECH_BLOG]
+Title: Electronic Logging Devices (ELD) & NT-11 Hardware
+Hardware Units: NT-11, PT-30, PT-40
+Connector: 9-pin or 6-pin Deutsch diagnostic port
+Mobile App: Bluetooth Low Energy connection for HOS logs and compliance data
+Web Panel: Fleet log aggregation, safety inspection monitoring, compliance reports
+NT-11 Features:
+- Logs engine hours, speed, odometer, diagnostic codes
+- Universal firmware supporting PT-30, PT-40 third-party hardware
