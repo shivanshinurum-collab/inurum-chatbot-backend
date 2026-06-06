@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c721dc0a-31ac-4821-a3fa-de02d457046a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/company/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/chat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/chunks.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/inurum.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/inurum_full_data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/rag.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inurumChatbot/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inurumChatbot/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inurumChatbot/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inurumChatbot/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inurumChatbot/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3EkSpy7wOSVuYWKdXRXvN9OTbaq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "io.flutter.project.isFirstOpen": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/shubhamjain/Documents/pai/inurumChatbot",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c721dc0a-31ac-4821-a3fa-de02d457046a" name="Changes" comment="" />
+      <created>1780721267339</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780721267339</updated>
+    </task>
+    <servers />
+  </component>
+</project>
