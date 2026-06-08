@@ -2,22 +2,66 @@ import 'dart:convert';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:http/http.dart' as http;
-
+//https://herself-spousal-antics.ngrok-free.dev/api/
 class ApiService {
   static String get baseUrl {
     if (kIsWeb) {
-      return 'http://127.0.0.1:8000/api/ask-ai/';
+      return 'https://herself-spousal-antics.ngrok-free.dev/api/ask-ai/';
     } else {
       try {
         if (Platform.isAndroid) {
-          return 'http://10.0.2.2:8000/api/ask-ai/';
+          return 'https://herself-spousal-antics.ngrok-free.dev/api/ask-ai/';
         }
       } catch (e) {
         // Platform is not supported on web or other runtimes, fallback to 127.0.0.1
       }
-      return 'http://127.0.0.1:8000/api/ask-ai/';
+      return 'https://herself-spousal-antics.ngrok-free.dev/api/ask-ai/';
     }
   }
+
+Future<void> askAiStream(
+  String question, {
+  required Function(String chunk) onChunk,
+  Function()? onDone,
+  Function(dynamic error)? onError,
+}) async {
+  try {
+    final request = http.Request(
+      'POST',
+      Uri.parse(baseUrl),
+    );
+
+    request.headers['Content-Type'] = 'application/json';
+
+    request.body = jsonEncode({
+      'question': question,
+    });
+
+    final streamedResponse = await request.send();
+
+    if (streamedResponse.statusCode != 200) {
+      final errorBody = await streamedResponse.stream.bytesToString();
+      String errorMessage = "Server error (${streamedResponse.statusCode})";
+      if (errorBody.isNotEmpty && !errorBody.contains('<!DOCTYPE html>') && errorBody.length < 200) {
+        errorMessage += ": $errorBody";
+      }
+      throw Exception(errorMessage);
+    }
+
+    streamedResponse.stream
+        .transform(utf8.decoder)
+        .listen(
+      (chunk) {
+        onChunk(chunk);
+      },
+      onDone: onDone,
+      onError: onError,
+      cancelOnError: true,
+    );
+  } catch (e) {
+    onError?.call(e);
+  }
+}
 
   Future<String> askAi(String question) async {
     try {
@@ -50,7 +94,7 @@ class ApiService {
 Future<String> test() async {
   try {
     final response = await http.get(
-      Uri.parse("http://127.0.0.1:8000/api/"),
+      Uri.parse("https://herself-spousal-antics.ngrok-free.dev/api/"),
     );
 
     if (response.statusCode == 200) {

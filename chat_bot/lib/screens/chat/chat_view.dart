@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import '../../models/message.dart';
 import '../../widgets/glowing_orb.dart';
 import 'chat_controller.dart';
 
@@ -275,7 +276,10 @@ class ChatView extends GetView<ChatController> {
   }
 
   // Individual message row (User vs Agent)
-  Widget _buildMessageItem(BuildContext context, message) {
+  Widget _buildMessageItem(BuildContext context, Message message) {
+    if (!message.isUser && message.text.isEmpty) {
+      return const SizedBox.shrink();
+    }
     if (message.isUser) {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),

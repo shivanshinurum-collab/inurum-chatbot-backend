@@ -27,7 +27,7 @@ class ChatController extends GetxController {
     print("API Response: ${apiMessage.value}");
   }
 
-  
+
   // Controllers
   final TextEditingController textController = TextEditingController();
   final ScrollController scrollController = ScrollController();
@@ -71,12 +71,42 @@ class ChatController extends GetxController {
     // Start thinking state
     isLoading.value = true;
 
-    // Call API
-    final String responseText = await _apiService.askAi(cleanText);
+    // // Call API
+    // final String responseText = await _apiService.askAi(cleanText);
 
-    // Stop thinking state and add AI reply
+    // // Stop thinking state and add AI reply
+    // isLoading.value = false;
+    // messages.add(Message.agent(responseText));
+
+    messages.add(Message.agent(""));
+
+final aiIndex = messages.length - 1;
+
+await _apiService.askAiStream(
+  cleanText,
+
+  onChunk: (chunk) {
     isLoading.value = false;
-    messages.add(Message.agent(responseText));
+
+    messages[aiIndex].text += chunk;
+
+    messages.refresh();
+
+    _scrollToBottom();
+  },
+
+  onDone: () {
+    isLoading.value = false;
+  },
+
+  onError: (error) {
+    isLoading.value = false;
+
+    messages[aiIndex].text = "Error: $error";
+
+    messages.refresh();
+  },
+);
     _scrollToBottom();
   }
 
