@@ -9,7 +9,7 @@ class ChatController extends GetxController {
 
   // Observable states
   final messages = <Message>[].obs;
-  final isChatStarted = false.obs;
+  final isChatStarted = true.obs;
   final isLoading = false.obs;
   final isListening = false.obs;
 
@@ -117,27 +117,8 @@ await _apiService.askAiStream(
     sendMessage(cleanQuery);
   }
 
-  // Simulate audio input listening
-  void toggleListening() {
-    if (isListening.value) {
-      // User tapped mic to stop
-      isListening.value = false;
-    } else {
-      isListening.value = true;
-      // Simulate listening to speech and sending query after 3 seconds
-      Timer(const Duration(seconds: 3), () {
-        if (isListening.value) {
-          isListening.value = false;
-          // Pre-fill input or send default test question from user's request
-          sendMessage("Tell me about Inurum Technologies");
-        }
-      });
-    }
-  }
-
-  // Reset the chat and go back to orb screen
+  // Reset the chat history
   void resetChat() {
-    isChatStarted.value = false;
     messages.clear();
     textController.clear();
   }

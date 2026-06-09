@@ -1,7 +1,7 @@
+import 'package:chat_bot/services/my_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'screens/chat/chat_binding.dart';
-import 'screens/chat/chat_view.dart';
+import 'app_pages/app_pages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Inurum AI Chatbot',
+      getPages: AppPages.routes,
+      initialRoute: AppPages.initialRoute,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
@@ -22,13 +24,13 @@ class MyApp extends StatelessWidget {
           primary: Color(0xFFFF52A2),
           secondary: Color(0xFFB53FFF),
           surface: Color(0xFF16151B),
-          background: Color(0xFF0C0B10),
         ),
         scaffoldBackgroundColor: const Color(0xFF0C0B10),
         useMaterial3: true,
       ),
-      initialBinding: ChatBinding(),
-      home: const ChatView(),
+      initialBinding: BindingsBuilder((){
+        Get.put(my_service());
+      }),
     );
   }
 }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../models/message.dart';
-import '../../widgets/glowing_orb.dart';
 import 'chat_controller.dart';
+import '../voice/voice_controller.dart';
 
 class ChatView extends GetView<ChatController> {
   const ChatView({super.key});
@@ -33,24 +33,7 @@ class ChatView extends GetView<ChatController> {
                 
                 // Main Body Area
                 Expanded(
-                  child: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 500),
-                    transitionBuilder: (child, animation) {
-                      return FadeTransition(
-                        opacity: animation,
-                        child: SlideTransition(
-                          position: Tween<Offset>(
-                            begin: const Offset(0, 0.05),
-                            end: Offset.zero,
-                          ).animate(animation),
-                          child: child,
-                        ),
-                      );
-                    },
-                    child: controller.isChatStarted.value
-                        ? _buildChatHistory()
-                        : _buildOrbStartup(context),
-                  ),
+                  child: _buildChatHistory(),
                 ),
 
                 // Bottom Input/Controls Area
@@ -72,13 +55,11 @@ class ChatView extends GetView<ChatController> {
         children: [
           // Back button
           Visibility(
-            visible: controller.isChatStarted.value,
+            visible: true,
             child: IconButton(
               icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 20),
               onPressed: () {
-                if (controller.isChatStarted.value) {
-                  controller.resetChat();
-                }
+                Get.back();
               },
             ),
           ),
@@ -161,90 +142,93 @@ class ChatView extends GetView<ChatController> {
     );
   }
 
-  // --- STARTUP / ORB VIEW ---
-  Widget _buildOrbStartup(BuildContext context) {
-    return Column(
-      key: const ValueKey('orb_startup'),
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Spacer(),
-        
-        // Large Glowing Animated Orb representing the AI "live photo"
-        Center(
-          child: GlowingOrb(
-            size: 280,
-            isThinking: controller.isLoading.value,
-            isListening: controller.isListening.value,
-          ),
-        ),
-        
-        const Spacer(),
-        
-        // Suggestion suggestions cards
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const Text(
-                "Suggested Questions",
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 13,
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.5,
+  // --- EMPTY STATE / SUGGESTIONS VIEW ---
+  Widget _buildEmptyStateSuggestions() {
+    return Center(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Welcome AI Icon
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  colors: [Color(0xFFFF4081), Color(0xFFFF9100)],
                 ),
-                textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 12),
-              
-              // Map suggestion list
-              ...controller.suggestions.take(2).map((suggestion) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0),
-                  child: InkWell(
-                    onTap: () => controller.selectSuggestion(suggestion),
-                    borderRadius: BorderRadius.circular(16),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.04),
-                        borderRadius: BorderRadius.circular(16),
-                        border: Border.all(
-                          color: Colors.white.withOpacity(0.06),
-                          width: 1.0,
-                        ),
+              child: const Icon(
+                Icons.auto_awesome,
+                color: Colors.white,
+                size: 32,
+              ),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              "How can I help you today?",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              "Type a message below or select one of the suggested topics to start.",
+              style: TextStyle(
+                color: Colors.white54,
+                fontSize: 13,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 24),
+            // Suggestions Grid
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                childAspectRatio: 2.2,
+              ),
+              itemCount: controller.suggestions.take(4).length,
+              itemBuilder: (context, index) {
+                final suggestion = controller.suggestions[index];
+                return InkWell(
+                  onTap: () => controller.selectSuggestion(suggestion),
+                  borderRadius: BorderRadius.circular(16),
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.03),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: Colors.white.withValues(alpha: 0.05),
                       ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              suggestion.replaceAll('\n', ' '),
-                              style: TextStyle(
-                                color: Colors.white.withOpacity(0.9),
-                                fontSize: 13,
-                                height: 1.3,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Icon(
-                            Icons.arrow_forward_rounded,
-                            color: Colors.white.withOpacity(0.3),
-                            size: 16,
-                          )
-                        ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        suggestion,
+                        style: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 12,
+                          height: 1.3,
+                        ),
+                        textAlign: TextAlign.center,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ),
                 );
-              }).toList(),
-            ],
-          ),
+              },
+            ),
+          ],
         ),
-        const SizedBox(height: 20),
-      ],
+      ),
     );
   }
 
@@ -255,6 +239,9 @@ class ChatView extends GetView<ChatController> {
       children: [
         Expanded(
           child: Obx(() {
+            if (controller.messages.isEmpty) {
+              return _buildEmptyStateSuggestions();
+            }
             return ListView.builder(
               controller: controller.scrollController,
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -507,114 +494,9 @@ class ChatView extends GetView<ChatController> {
   Widget _buildBottomPanel(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 20.0, top: 8.0),
-      child: AnimatedCrossFade(
-        firstChild: _buildOrbControls(context),
-        secondChild: _buildTextInputField(),
-        crossFadeState: controller.isChatStarted.value
-            ? CrossFadeState.showSecond
-            : CrossFadeState.showFirst,
-        duration: const Duration(milliseconds: 350),
-      ),
+      child: _buildTextInputField(),
     );
   }
-
-  // Small bottom controls on Startup Screen (Mic button + secondary actions)
-  Widget _buildOrbControls(BuildContext context) {
-    return Column(
-      children: [
-        if (controller.isListening.value)
-          const Padding(
-            padding: EdgeInsets.only(bottom: 16.0),
-            child: Text(
-              "Listening...",
-              style: TextStyle(
-                color: Color(0xFFFF52A2),
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                letterSpacing: 0.5,
-              ),
-            ),
-          ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            // Left Refresh Button
-            IconButton(
-              icon: const Icon(Icons.refresh_rounded, color: Colors.white54, size: 24),
-              onPressed: () {
-                // Clear state / change suggestions
-              },
-            ),
-            
-            // Center Large Pulsing Mic Button
-            GestureDetector(
-              onTap: () => controller.toggleListening(),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  // Breathing outer ring
-                  if (controller.isListening.value)
-                    TweenAnimationBuilder<double>(
-                      tween: Tween(begin: 1.0, end: 1.5),
-                      duration: const Duration(milliseconds: 1000),
-                      builder: (context, value, child) {
-                        return Container(
-                          width: 64 * value,
-                          height: 64 * value,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: const Color(0xFFFF52A2).withOpacity(0.25 * (2.0 - value)),
-                          ),
-                        );
-                      },
-                      onEnd: () {},
-                    ),
-                  
-                  // Main purple mic circular button
-                  Container(
-                    width: 64,
-                    height: 64,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFFB53FFF), Color(0xFFFF3F82)],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFFFF3F82).withOpacity(0.4),
-                          blurRadius: 16,
-                          spreadRadius: 2,
-                          offset: const Offset(0, 4),
-                        )
-                      ],
-                    ),
-                    child: Icon(
-                      controller.isListening.value ? Icons.stop_rounded : Icons.mic_rounded,
-                      color: Colors.white,
-                      size: 28,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            
-            // Right Keyboard Toggle Button
-            IconButton(
-              icon: const Icon(Icons.keyboard_rounded, color: Colors.white54, size: 24),
-              onPressed: () {
-                // Show text field immediately
-                controller.isChatStarted.value = true;
-                FocusScope.of(context).requestFocus(controller.inputFocusNode);
-              },
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
   // Chat TextInput Field Panel (Visible when chat started)
   Widget _buildTextInputField() {
     return Row(
@@ -677,9 +559,10 @@ class ChatView extends GetView<ChatController> {
                 IconButton(
                   icon: const Icon(Icons.mic_none_rounded, color: Colors.white54, size: 20),
                   onPressed: () {
-                    // Switch to voice mode/listening
-                    controller.isChatStarted.value = false;
-                    controller.toggleListening();
+                    Get.back();
+                    if (Get.isRegistered<VoiceController>()) {
+                      Get.find<VoiceController>().startListening();
+                    }
                   },
                 ),
                 

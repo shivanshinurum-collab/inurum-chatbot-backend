@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -19,7 +20,7 @@ class ApiService {
     }
   }
 
-Future<void> askAiStream(
+Future<StreamSubscription<String>?> askAiStream(
   String question, {
   required Function(String chunk) onChunk,
   Function()? onDone,
@@ -48,7 +49,7 @@ Future<void> askAiStream(
       throw Exception(errorMessage);
     }
 
-    streamedResponse.stream
+    final subscription = streamedResponse.stream
         .transform(utf8.decoder)
         .listen(
       (chunk) {
@@ -58,8 +59,10 @@ Future<void> askAiStream(
       onError: onError,
       cancelOnError: true,
     );
+    return subscription;
   } catch (e) {
     onError?.call(e);
+    return null;
   }
 }
 
@@ -86,7 +89,7 @@ Future<void> askAiStream(
         return "Server error: ${response.statusCode}. Failed to get response.";
       }
     } catch (e) {
-      return "Network error: Could not reach the AI agent backend. Please make sure the Django server is running on port 8000. ,\n Error = ${e}";
+      return "Network error: Could not reach the AI agent backend. Please make sure the Django server is running on port 8000. ,\n Error = $e";
     }
   }
 
