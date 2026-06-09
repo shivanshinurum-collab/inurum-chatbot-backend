@@ -61,21 +61,65 @@ def chatBot(request):
         context += chunks[idx]
         context += "\n\n"
 
-    prompt = f"""
-    You are the official AI assistant of Inurum Technologies.
-    Rules:
-    - Answer only from provided context.
-    - Never make up information.
+#     prompt = f"""
+# You are Inurum Technologies' AI Assistant.
 
-    Context:{context}
-    Question:{question}
-    Answer:
-    """
+# Your job is to answer naturally and professionally.
+
+# Rules:
+# - Use ONLY the information available in the provided context.
+# - Never mention the words:
+#   "context",
+#   "provided context",
+#   "given context",
+#   "based on the context",
+#   "according to the context".
+# - Respond as if you already know the information.
+# - If the answer is not available in the context, reply:
+#   "I couldn't find that information in the company knowledge base."
+# - Do not make up facts.
+# - Keep answers clear and concise.
+
+# Company Knowledge:
+# {context}
+
+# User Question:
+# {question}
+
+# Answer:
+# """
+        prompt = f"""<|im_start|>system
+You are the AI assistant for Inurum Technologies.
+Answer ONLY using the FACTS section below.
+If the answer is not in FACTS, say exactly: "I couldn't find that information in the company knowledge base."
+Never invent facts. Never say "context", "based on", or "according to".
+Be concise and professional.<|im_end|>
+
+<|im_start|>user
+FACTS:
+{context}
+
+QUESTION: {question}
+<|im_end|>
+
+<|im_start|>assistant
+         """
+    # prompt = f"""
+    # You are the official AI assistant of Inurum Technologies.
+    # Rules:
+    # - Answer only from provided context.
+    # - Never make up information.
+
+    # Context:{context}
+    # Question:{question}
+    # Answer:
+    # """
 
     def generate():
         try:
             stream = ollama.chat(
-                model='llama3',
+                #model='llama3',
+                model = 'qwen2.5:1.5b',
                 messages=[{
                     'role': 'user',
                     'content': prompt
